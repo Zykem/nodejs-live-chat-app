@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Live Chat App</title>
+</head>
+<body>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script>
+
+        var name = prompt("Enter your name")
+
+    </script>
+
+    <div class="title" id="title">
+
+        <h1>Live Chat App</h1>
+
+    </div>
+
+
+    <ul id="messages"></ul>
+
+    <form action="" id="chatmsg">
+
+        <input placeholder="Enter Message" id="msg" required autocomplete="on"> <button>Send Message</button>
+
+    </form>
+    
+    <script>
+
+        const socket = io();
+
+        socket.emit('joining msg', name)
+
+        $('#chatmsg').submit(function(event) {
+
+            event.preventDefault()
+            // chatMsg
+            socket.emit('chatmsg', (name + ' # ' + $('#msg').val()))
+            // selfMsg
+            $('#messages').append($('<li id="list">').text('Ty:  ' + $('#msg').val()));
+            
+            $('#msg').val("");
+
+            return false;
+
+        })
+
+        socket.on('chatmsg', function(msg) {
+
+            $('#messages').append($('<li>').text(msg))
+
+        })
+
+
+    </script>
+
+</body>
+</html>

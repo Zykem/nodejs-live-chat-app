@@ -1,0 +1,89 @@
+* { 
+
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+
+}
+ 
+  #title {
+
+ 	text-align: center;
+    padding: 10px;
+    font-family: sans-serif;
+    color: rgb(182, 179, 179);
+    
+ } 
+
+
+ body { 
+
+ 	font: 20px;
+    background-color: rgb(19, 17, 28);
+
+}
+
+ 
+ 
+ form { 
+     
+ 	position: fixed; 
+ 	bottom: 15px;
+    margin: auto;
+    width: 50vw;
+    margin-left: 25vw;
+     
+ }
+ 
+ form input { 
+ 	background-color: #e6ffe6;
+ 	border: 0; 
+ 	padding: 10px; 
+    width: 100%;
+ 	margin-right: 0.5%; 
+    text-align: center;
+ }
+ 
+ form button { 
+ 	width: 100%; 
+ 	background: #868686;
+ 	border: none; 
+ 	padding: 5px; 
+ 	font-size: 20px; 
+    color: rgb(204, 201, 201);
+    cursor: pointer;
+ }
+ 
+ #messages { 
+
+ 	margin: 0; 
+ 	padding: 0; 
+    color: white;
+ 	
+ }
+ 
+ #messages li { 
+
+    text-align: center;
+    font-family: sans-serif;
+ 	padding: 5px 10px; 
+    color: white;
+
+ }
+ 
+ #messages li:nth-child(odd) { 
+
+    background-color: rgb(46, 41, 67); 
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+
+ }
+
+
+#list{
+    
+	text-align: center;
+    font-family: sans-serif;
+    
+}
